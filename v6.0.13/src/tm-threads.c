@@ -2000,6 +2000,8 @@ again:
     SCLogNotice("all %"PRIu16" packet processing threads, %"PRIu16" management "
               "threads initialized, engine started.", ppt_num, mgt_num);
 
+    SCLogNotice("*** KDD DETECTION INITIALIZED *** (tm-threads.c)");
+    
     return TM_ECODE_OK;
 }
 

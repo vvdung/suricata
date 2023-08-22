@@ -1043,3 +1043,20 @@ dkms.conf
 *.uf2
 # Raspberry Pi Pico disassembler file
 *.dis
+
+# suricata
+.deps/
+.libs/
+libtool
+suricata.yaml
+config.status
+stamp-h1
+htp.pc
+v6.0.13/etc/suricata.logrotate
+v6.0.13/etc/suricata.service
+v6.0.13/libhtp/htp_config_auto_gen.h
+v6.0.13/rust/Cargo.toml
+v6.0.13/rust/.cargo/config
+v6.0.13/src/autoconf.h
+v6.0.13/suricata-update/Makefile
+v6.0.13/python/suricata/config/defaults.py
