@@ -12,9 +12,9 @@ Makefile
 .deps/
 .libs/
 *~
-m4/
+#m4/
 TAGS
-aclocal.m4
+#aclocal.m4
 autoconf.h
 autom4te.cache/
 build/*
@@ -24,12 +24,12 @@ config.h
 config.log
 config.status
 config.sub
-configure
+#configure
 depcomp
 doc/userguide/suricata.1
 etc/suricata.logrotate
 etc/suricata.service
-install-sh
+#install-sh
 libhtp/TAGS
 libhtp/aclocal.m4
 libhtp/autom4te.cache/
@@ -62,5 +62,5 @@ stamp-h1
 src/build-info.h
 test.sh
 .vscode/*
-/suricata-update/*
+#/suricata-update/*
 !/suricata-update/Makefile.am
