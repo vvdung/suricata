@@ -1,0 +1,18 @@
+/home/vvdung/suricata/suricata-6.0.13/rust/target/release/deps/ryu-6d028573e2895763.rmeta: /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/lib.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/buffer/mod.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/common.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_full_table.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_intrinsics.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/digit_table.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s_intrinsics.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mod.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/exponent.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mantissa.rs
+
+/home/vvdung/suricata/suricata-6.0.13/rust/target/release/deps/libryu-6d028573e2895763.rlib: /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/lib.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/buffer/mod.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/common.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_full_table.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_intrinsics.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/digit_table.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s_intrinsics.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mod.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/exponent.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mantissa.rs
+
+/home/vvdung/suricata/suricata-6.0.13/rust/target/release/deps/ryu-6d028573e2895763.d: /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/lib.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/buffer/mod.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/common.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_full_table.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_intrinsics.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/digit_table.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s_intrinsics.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mod.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/exponent.rs /home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mantissa.rs
+
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/lib.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/buffer/mod.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/common.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_full_table.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/d2s_intrinsics.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/digit_table.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/f2s_intrinsics.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mod.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/exponent.rs:
+/home/vvdung/suricata/suricata-6.0.13/rust/vendor/ryu/src/pretty/mantissa.rs:
