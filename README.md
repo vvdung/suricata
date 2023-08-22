@@ -110,8 +110,3 @@ A: To assist in the automation of the QA, we're not accepting warnings or errors
 __Q: I think your QA test is wrong__
 
 A: If you really think it is, we can discuss how to improve it. But don't come to this conclusion too quickly, more often it's the code that turns out to be wrong.
-
-
-__Q: do you require signing of a contributor license agreement?__
-
-A: Yes, we do this to keep the ownership of Suricata in one hand: the Open Information Security Foundation. See https://suricata.io/features/open-source/ and https://suricata.io/our-story/contribution-agreement/

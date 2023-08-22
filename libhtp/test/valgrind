@@ -1,9 +1,0 @@
-#!/bin/sh
-# --gen-suppressions=all \
-exec valgrind \
---suppressions=valgrind.supp \
---leak-check=full \
---show-reachable=yes \
---dsymutil=yes \
-"$@"
-
