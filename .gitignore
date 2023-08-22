@@ -18,14 +18,14 @@ TAGS
 autoconf.h
 autom4te.cache/
 build/*
-compile
+#compile
 #config.guess
 config.h
 config.log
 config.status
 #config.sub
 #configure
-depcomp
+#depcomp
 doc/userguide/suricata.1
 etc/suricata.logrotate
 etc/suricata.service
