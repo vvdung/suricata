@@ -19,7 +19,7 @@ autoconf.h
 autom4te.cache/
 build/*
 compile
-config.guess
+#config.guess
 config.h
 config.log
 config.status
