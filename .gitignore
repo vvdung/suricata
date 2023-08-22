@@ -44,8 +44,8 @@ libhtp/libtool
 libhtp/stamp-h1
 libhtp/test/TAGS
 libtool
-ltmain.sh
-missing
+#ltmain.sh
+#missing
 qa/log/
 qa/coccinelle/struct-flags.cocci
 rust/*/target/*
