@@ -23,7 +23,7 @@ config.guess
 config.h
 config.log
 config.status
-config.sub
+#config.sub
 #configure
 depcomp
 doc/userguide/suricata.1
