@@ -1060,3 +1060,8 @@ v6.0.13/rust/.cargo/config
 v6.0.13/src/autoconf.h
 v6.0.13/suricata-update/Makefile
 v6.0.13/python/suricata/config/defaults.py
+v6.0.13/autom4te.cache/*
+v6.0.13/libhtp/autom4te.cache/*
+v6.0.13/rust/Cargo.lock
+v6.0.13/rust/target/*
+v6.0.13/src/suricata

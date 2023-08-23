@@ -1,4 +1,4 @@
-Suricata 6.0.13
+Suricata 6.0.13 - OpenWrt
 ========
 
 [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/suricata.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:suricata)
