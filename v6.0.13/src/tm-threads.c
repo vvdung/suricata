@@ -43,6 +43,9 @@
 #include "util-signal.h"
 #include "queue.h"
 
+/* vvdung@husc.edu.vn */
+#include "detect-kdd-features.h"
+
 #ifdef PROFILE_LOCKING
 thread_local uint64_t mutex_lock_contention;
 thread_local uint64_t mutex_lock_wait_ticks;
@@ -1995,12 +1998,14 @@ again:
             tv = tv->next;
         }
     }
+
+    SCLogNotice("*** KDD DETECTION INITIALIZED (tm-threads.c)***");
+    KDD_Initialization();
+
     SCMutexUnlock(&tv_root_lock);
 
     SCLogNotice("all %"PRIu16" packet processing threads, %"PRIu16" management "
               "threads initialized, engine started.", ppt_num, mgt_num);
-
-    SCLogNotice("*** KDD DETECTION INITIALIZED *** (tm-threads.c)");
     
     return TM_ECODE_OK;
 }
