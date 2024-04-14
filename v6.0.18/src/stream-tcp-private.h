@@ -126,6 +126,10 @@ typedef struct TcpStream_ {
     uint32_t sack_size;             /**< combined size of the SACK ranges currently in our tree. Updated
                                      *   at INSERT/REMOVE time. */
     struct TCPSACK sack_tree;       /**< red back tree of TCP SACK records. */
+
+    //vvdung@husc.edu.vn    
+    uint8_t     ptcpFlags;      //prev tcpflags    
+
 } TcpStream;
 
 #define STREAM_BASE_OFFSET(stream)  ((stream)->sb.stream_offset)
@@ -275,6 +279,10 @@ typedef struct TcpSession_ {
     TcpStream server;
     TcpStream client;
     TcpStateQueue *queue;                   /**< list of SYN/ACK candidates */
+
+    // vvdung@husc.edu.vn
+    uint8_t   tcpFlags;       //current tcp flags
+
 } TcpSession;
 
 #define StreamTcpSetStreamFlagAppProtoDetectionCompleted(stream) \

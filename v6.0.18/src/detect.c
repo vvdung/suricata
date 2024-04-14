@@ -59,6 +59,9 @@
 #include "util-validate.h"
 #include "util-detect.h"
 
+/* vvdung@husc.edu.vn */
+#include "detect-kdd-features.h"
+
 typedef struct DetectRunScratchpad {
     const AppProto alproto;
     const uint8_t flow_flags; /* flow/state flags: STREAM_* */
@@ -1653,6 +1656,10 @@ TmEcode Detect(ThreadVars *tv, Packet *p, void *data)
     } else {
         DetectNoFlow(tv, de_ctx, det_ctx, p);
     }
+
+    /* vvdung@husc.edu.vn */
+    KDD_Update_Features(tv,de_ctx, det_ctx, p);
+
     return TM_ECODE_OK;
 error:
     return TM_ECODE_FAILED;

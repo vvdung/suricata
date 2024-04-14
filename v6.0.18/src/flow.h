@@ -412,6 +412,9 @@ typedef struct Flow_
      * flow lock or flow hash row lock. */
     struct timeval lastts;
 
+    /* vvdung@husc.edu.vn */    
+    uint8_t kdd_flowflags;
+
     /* end of flow "header" */
 
     /** timeout policy value in seconds to add to the lastts.tv_sec
