@@ -548,10 +548,10 @@ static void KDDTrackerPrint(void){
 
 static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Packet* p){
 
-  //u_char* ipSrc = (u_char*)&p->ip4h->s_ip_src.s_addr;
-  //u_char* ipDst = (u_char*)&p->ip4h->s_ip_dst.s_addr;
-  //ushort portSrc = TCP_GET_SRC_PORT(p);
-  //ushort portDst = TCP_GET_DST_PORT(p);
+  u_char* ipSrc = (u_char*)&p->ip4h->s_ip_src.s_addr;
+  u_char* ipDst = (u_char*)&p->ip4h->s_ip_dst.s_addr;
+  ushort portSrc = TCP_GET_SRC_PORT(p);
+  ushort portDst = TCP_GET_DST_PORT(p);
 
   Flow* flow = p->flow;
   if (!flow){    
@@ -576,7 +576,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
   }
 
   //FlowBucket* fb = flow->fb;  
-  //uint8_t prevFlags,currFlags;
+  uint8_t prevFlags,currFlags;
   uint8_t direct = FlowGetPacketDirection(flow,p);
   uint8_t statusFlow = FLOW_STATE_ESTABLISHED;
   char czIO[32];
@@ -585,7 +585,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
     strcpy(czIO,"=> SERVER");
     ssn->server.ptcpFlags = ssn->tcpFlags;
     ssn->tcpFlags = p->tcph->th_flags;
-    //prevFlags = ssn->server.ptcpFlags; currFlags = ssn->tcpFlags;    
+    prevFlags = ssn->server.ptcpFlags; currFlags = ssn->tcpFlags;    
 
     if (flow->flow_state == FLOW_STATE_NEW){
       statusFlow = FLOW_STATE_NEW;
@@ -604,7 +604,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
     strcpy(czIO,"=> CLIENT");
     ssn->client.ptcpFlags = ssn->tcpFlags;
     ssn->tcpFlags = p->tcph->th_flags;    
-    //prevFlags = ssn->client.ptcpFlags; currFlags = ssn->tcpFlags;
+    prevFlags = ssn->client.ptcpFlags; currFlags = ssn->tcpFlags;
 
     if (flow->flow_state == FLOW_STATE_CLOSED){
       if (ssn->state == TCP_CLOSED) statusFlow = FLOW_STATE_CLOSED;
@@ -619,12 +619,12 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
     }*/
     KDDTrackerAdd(hash);
 
-    /*SCLogNotice("*** SESSION FIRST [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %u",
+    SCLogNotice("*** SESSION FIRST [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %u",
               flow,hash,
               ipSrc[0],ipSrc[1],ipSrc[2],ipSrc[3],portSrc,
               ipDst[0],ipDst[1],ipDst[2],ipDst[3],portDst, 
               ssn->pstate,ssn->state,
-              prevFlags,currFlags,flow->use_cnt,_trackerHash.len);*/      
+              prevFlags,currFlags,flow->use_cnt,_trackerHash.len);      
             
   }
 
@@ -642,12 +642,12 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
     
   if (statusFlow == FLOW_STATE_CLOSED){
       KDDTrackerDel(hash);
-      /*SCLogNotice("*** SESSION CLOSE [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %d",
+      SCLogNotice("*** SESSION CLOSE [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %d",
           flow,hash,
           ipSrc[0],ipSrc[1],ipSrc[2],ipSrc[3],portSrc,
           ipDst[0],ipDst[1],ipDst[2],ipDst[3],portDst, 
           ssn->pstate,ssn->state,
-          prevFlags,currFlags,flow->use_cnt,_trackerHash.len);*/       
+          prevFlags,currFlags,flow->use_cnt,_trackerHash.len);       
   }
 
   
@@ -752,7 +752,7 @@ void KDD_IPOnlyInit(void* detectEngineCtx){
 
 static void KDDLoadRules(void){
   SCLogNotice("=== LOAD KDD RULES ===");
-  char czFile[PATH_MAX] = "/var/kdd/kddtest.txt";
+  char czFile[PATH_MAX] = "/opt/kdd/kddtest.txt";
   // if (!getcwd(czFile, PATH_MAX)) {
   //   SCLogError(SC_ERR_SPRINTF,"getcwd()");
   //   return;
@@ -849,7 +849,7 @@ void KDD_Initialization(void){
   memset(_trackerFlow,0x00,uSize);
 
   
-  char czFile[PATH_MAX] = "/var/kdd/kdd.log";
+  char czFile[PATH_MAX] = "/opt/kdd/kdd.log";
   // if (!getcwd(czFile, PATH_MAX)) {
   //   SCLogError(SC_ERR_SPRINTF,"getcwd()");
   //   return;
