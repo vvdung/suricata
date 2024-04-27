@@ -630,7 +630,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
 
     KDDTrackerAdd(hash);
 
-    SCLogNotice("* SESSION FIRST [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %u",
+    SCLogNotice("*** SESSION FIRST [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %u",
               flow,hash,
               ipSrc[0],ipSrc[1],ipSrc[2],ipSrc[3],portSrc,
               ipDst[0],ipDst[1],ipDst[2],ipDst[3],portDst,
@@ -654,7 +654,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
   if (statusFlow == FLOW_STATE_CLOSED){
       bool okDel = KDDTrackerDel(hash);
       if (okDel){
-        SCLogNotice("* SESSION CLOSE [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %d",
+        SCLogNotice("*** SESSION CLOSE [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %d",
             flow,hash,
             ipSrc[0],ipSrc[1],ipSrc[2],ipSrc[3],portSrc,
             ipDst[0],ipDst[1],ipDst[2],ipDst[3],portDst,
@@ -860,7 +860,7 @@ void KDD_Initialization(void){
   memset(_trackerFlow,0x00,uSize);
 
 
-  char czFile[PATH_MAX] = "/opt/kdd/kdd.log"; 
+  char czFile[PATH_MAX] = "/opt/kdd/kdd.log";
   // if (!getcwd(czFile, PATH_MAX)) {
   //   SCLogError(SC_ERR_SPRINTF,"getcwd()");
   //   return;
