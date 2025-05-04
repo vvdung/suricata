@@ -23,10 +23,10 @@
 #define CLS 64
 
 /* Our CONFIG_DIR */
-#define CONFIG_DIR "/usr/local/etc/suricata/"
+#define CONFIG_DIR "/etc/suricata/"
 
 /* Our DATA_DIR */
-#define DATA_DIR "/usr/local/var/lib/suricata/data"
+#define DATA_DIR "/opt/lib/suricata/data"
 
 /* Enable debug output */
 /* #undef DEBUG */
