@@ -759,7 +759,7 @@ void KDD_IPOnlyInit(void* detectEngineCtx){
 
 static void KDDLoadRules(void){
   SCLogNotice("=== LOAD KDD RULES ===");
-  char czFile[PATH_MAX] = "/opt/kdd/kddtest.txt";
+  char czFile[PATH_MAX] = "/var/kdd/kddtest.txt";
   // if (!getcwd(czFile, PATH_MAX)) {
   //   SCLogError(SC_ERR_SPRINTF,"getcwd()");
   //   return;

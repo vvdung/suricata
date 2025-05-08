@@ -2006,6 +2006,7 @@ again:
         }
     }
 
+    /* vvdung@husc.edu.vn */
     SCLogNotice("*** KDD DETECTION INITIALIZED (tm-threads.c)***");
     KDD_Initialization();
 
