@@ -577,7 +577,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
     return;
   }
 
-  //FlowBucket* fb = flow->fb;  
+  //FlowBucket* fb = flow->fb;
   //uint8_t prevFlags,currFlags;
   uint8_t direct = FlowGetPacketDirection(flow,p);
   uint8_t statusFlow = FLOW_STATE_ESTABLISHED;
@@ -588,7 +588,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
     strcpy(czIO,"=> SERVER");
     ssn->server.ptcpFlags = ssn->tcpFlags;
     ssn->tcpFlags = p->tcph->th_flags;
-    //prevFlags = ssn->server.ptcpFlags; currFlags = ssn->tcpFlags;    
+    //prevFlags = ssn->server.ptcpFlags; currFlags = ssn->tcpFlags;
 
     // if (flow->flow_state == FLOW_STATE_NEW){
     //   statusFlow = FLOW_STATE_NEW;
@@ -602,7 +602,7 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
   else{
     strcpy(czIO,"=> CLIENT");
     ssn->client.ptcpFlags = ssn->tcpFlags;
-    ssn->tcpFlags = p->tcph->th_flags;    
+    ssn->tcpFlags = p->tcph->th_flags;
     //prevFlags = ssn->client.ptcpFlags; currFlags = ssn->tcpFlags;
 
     if (flow->flow_state == FLOW_STATE_NEW){
@@ -628,13 +628,12 @@ static void KDD_Update_Features_TCP(ThreadVars* tv, DetectEngineCtx *de_ctx, Pac
 
     KDDTrackerAdd(hash);
 
-    SCLogNotice("*** SESSION FIRST [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %u",
+   /*SCLogNotice("*** SESSION FIRST [%p] hash[%u] [%d.%d.%d.%d:%d]->[%d.%d.%d.%d:%d] ssnState[%02X][%02X] tcpFlags[%02X][%02X] ref_cnt:%d %u",
               flow,hash,
               ipSrc[0],ipSrc[1],ipSrc[2],ipSrc[3],portSrc,
               ipDst[0],ipDst[1],ipDst[2],ipDst[3],portDst,
               ssn->pstate,ssn->state,
-              prevFlags,currFlags,flow->use_cnt,_trackerHash.len);*/      
-            
+              prevFlags,currFlags,flow->use_cnt,_trackerHash.len);*/
   }
 
   //KDDCheckRuleMatch(p);
